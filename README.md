@@ -550,8 +550,8 @@ $$
 we may write
 
 ```c
-logzn = log (x * x + y * y) / 2.0;
-nu = n + 1.0 - log (logzn) / log (2.0);
+log_zn = log (x * x + y * y) / 2.0;
+nu = n + 1.0 - log (log_zn) / log (2.0);
 ```
 
 This is mathematically equivalent.
