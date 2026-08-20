@@ -24,7 +24,7 @@ Each program demonstrates a different palette implementation in which different 
 ## Coordinates of Some Interesting Areas of the Mandelbrot Set
 
 | Real Coordinate of Center | Imaginary Coordinate of Center | Horizontal Span on Real Axis | Description |
-|---|---|---|
+|---|---|---|---|
 | `-0.7` | `0.0` | `3.0769`  | Whole Mandelbrot set |
 | `-0.87591` | `0.20464` | 0.53184 | Seahorse valley |
 | `-0.759856` | `0.125547` | `0.051579` | Spirals and seahorses |
