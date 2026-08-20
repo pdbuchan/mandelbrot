@@ -314,6 +314,12 @@ hsv_to_rgb (long double h, long double s, long double v) {
     case 3: r = p, g = q, b = v; break;
     case 4: r = t, g = p, b = v; break;
     case 5: r = v, g = p, b = q; break;
+    default:
+      // h is normalized to [0, 1), so this case should never be reached.
+      r = 0.0L;
+      g = 0.0L;
+      b = 0.0L;
+      break;
   }
 
   c.r = (uint8_t) lroundl (r * 255.0L);

@@ -21,11 +21,25 @@ Each program demonstrates a different palette implementation in which different 
 | `cubehelix.c` | Exterior colors are derived from the smooth iteration count using D.A. Green's Cubehelix color scheme. |
 | `spectrum.c` | Exterior colors are derived from the smooth iteration count using an approximate visible-light spectrum from violet through red. |
 
-## Build
+## Building
 
+GCC and GNU Make are sufficient for all included builds. Build everything from the repository root with:
+
+```sh
+make
+```
+
+Or, any of the programs can be compiled individually:
+
+```sh
+gcc -Wall program.c -o program
+```
 
 ## Usage
 
+```
+./program
+```
 
 ## Coordinates of Some Interesting Areas of the Mandelbrot Set
 

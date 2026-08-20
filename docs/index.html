@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="C language Mandelbrot renderers demonstrating integer and smooth coloring palettes.">
+  <title>Mandelbrot Set C Examples</title>
+  <link rel="stylesheet" href="assets/mandelbrot.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <p class="site-title">Mandelbrot Set C Examples</p>
+    <nav aria-label="Primary navigation">
+      <a href="#programs">Programs</a>
+      <a href="#build">Build</a>
+      <a href="smoothing.html">Smooth coloring</a>
+      <a href="https://github.com/pdbuchan/mandelbrot">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Mandelbrot Set</h1>
+    <p>A collection of small, independent C programs for rendering user-selected areas of the Mandelbrot set. The examples share the same core escape-time calculation while demonstrating several different ways to convert integer or smooth iteration counts into color.</p>
+    <div class="actions">
+      <a class="button" href="#programs">Explore the palettes</a>
+      <a class="button secondary" href="smoothing.html">Read the smoothing derivation</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About the project</h2>
+    <div class="panel">
+      <p>The programs ask for the center coordinate, horizontal span, image dimensions, and maximum number of iterations, then write a 24-bit <code>output.bmp</code>. Pixel centers are sampled with equal coordinate spacing on the real and imaginary axes so the complex plane is not distorted.</p>
+      <p><code>basic.c</code> demonstrates conventional integer escape-time coloring with an external palette file. The remaining programs use a continuous (smooth) iteration count and apply different palette formulae or color-space constructions. Points that do not escape within the selected maximum iteration count are rendered black.</p>
+      <p>The repository also contains a detailed mathematical derivation of the smooth iteration formula in <a href="https://github.com/pdbuchan/mandelbrot/blob/main/README.md">README.md</a> and an unchanged Microsoft Word version, <a href="https://github.com/pdbuchan/mandelbrot/raw/refs/heads/main/Mandelbrot.docx">Mandelbrot.docx</a>.</p>
+    </div>
+  </section>
+
+  <section id="programs">
+    <h2>Palette examples</h2>
+    <p class="lead">Each thumbnail links to the corresponding full 3840 × 2880 example. The source link opens the C implementation in the repository.</p>
+    <div class="gallery">
+
+      <article class="card">
+        <a class="image-link" href="assets/images/basic_whole.jpg"><img src="assets/images/basic_whole_thumb.jpg" alt="Mandelbrot set rendered using the basic integer palette"></a>
+        <div class="card-body"><h3>Basic</h3><p>Uses the integer escape count to index an external RGB palette file. This intentionally demonstrates the visible banding of conventional escape-time coloring.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/basic.c">basic.c</a> · <a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/palette">palette</a></p></div>
+      </article>
+
+      <article class="card">
+        <a class="image-link" href="assets/images/cosine_whole.jpg"><img src="assets/images/cosine_whole_thumb.jpg" alt="Mandelbrot set rendered with a cosine palette"></a>
+        <div class="card-body"><h3>Cosine</h3><p>Uses phase-shifted cosine functions for the red, green, and blue channels, driven by the smooth iteration count.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/cosine.c">cosine.c</a></p></div>
+      </article>
+
+      <article class="card">
+        <a class="image-link" href="assets/images/linear_whole.jpg"><img src="assets/images/linear_whole_thumb.jpg" alt="Mandelbrot set rendered with linear RGB interpolation"></a>
+        <div class="card-body"><h3>Linear interpolation</h3><p>Linearly interpolates between a sequence of RGB control colors to turn the smooth iteration count into a continuous gradient.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/linear.c">linear.c</a></p></div>
+      </article>
+
+      <article class="card">
+        <a class="image-link" href="assets/images/smoothstep_whole.jpg"><img src="assets/images/smoothstep_whole_thumb.jpg" alt="Mandelbrot set rendered with smoothstep interpolation"></a>
+        <div class="card-body"><h3>Smoothstep</h3><p>Applies cubic smoothstep easing between RGB control colors, giving each segment zero slope at its endpoints.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/smoothstep.c">smoothstep.c</a></p></div>
+      </article>
+
+      <article class="card">
+        <a class="image-link" href="assets/images/bezier_whole.jpg"><img src="assets/images/bezier_whole_thumb.jpg" alt="Mandelbrot set rendered with a Bezier color palette"></a>
+        <div class="card-body"><h3>Bézier</h3><p>Uses a cubic Bézier curve through RGB space and traverses the curve forward and backward for a continuous repeating palette.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/bezier.c">bezier.c</a></p></div>
+      </article>
+
+      <article class="card">
+        <a class="image-link" href="assets/images/warm_power_whole.jpg"><img src="assets/images/warm_power_whole_thumb.jpg" alt="Mandelbrot set rendered with a warm RGB power-law palette"></a>
+        <div class="card-body"><h3>Warm power</h3><p>Uses progressively higher powers of a common parameter for the RGB channels to form a warm black-to-light color progression.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/warm_power.c">warm_power.c</a></p></div>
+      </article>
+
+      <article class="card">
+        <a class="image-link" href="assets/images/fire_whole.jpg"><img src="assets/images/fire_whole_thumb.jpg" alt="Mandelbrot set rendered with a fire palette"></a>
+        <div class="card-body"><h3>Fire</h3><p>Uses a cyclic heat-style progression through black, red, yellow, and white, with a smooth return to the beginning of the cycle.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/fire.c">fire.c</a></p></div>
+      </article>
+
+      <article class="card">
+        <a class="image-link" href="assets/images/hsv2rgb_whole.jpg"><img src="assets/images/hsv2rgb_whole_thumb.jpg" alt="Mandelbrot set rendered by converting HSV hue to RGB"></a>
+        <div class="card-body"><h3>HSV to RGB</h3><p>Maps the smooth iteration count around the HSV hue wheel at full saturation and value, then converts the result to RGB.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/hsv2rgb.c">hsv2rgb.c</a></p></div>
+      </article>
+
+      <article class="card">
+        <a class="image-link" href="assets/images/gaussian_whole.jpg"><img src="assets/images/gaussian_whole_thumb.jpg" alt="Mandelbrot set rendered with Gaussian RGB channel functions"></a>
+        <div class="card-body"><h3>Gaussian</h3><p>Builds red, green, and blue from three phase-shifted Gaussian functions using circular distance to avoid a discontinuity at the wrap point.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/gaussian.c">gaussian.c</a></p></div>
+      </article>
+
+      <article class="card">
+        <a class="image-link" href="assets/images/cubehelix_whole.jpg"><img src="assets/images/cubehelix_whole_thumb.jpg" alt="Mandelbrot set rendered with the Cubehelix color scheme"></a>
+        <div class="card-body"><h3>Cubehelix</h3><p>Uses D. A. Green's Cubehelix construction, combining a controlled intensity progression with a rotating color component.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/cubehelix.c">cubehelix.c</a></p></div>
+      </article>
+
+      <article class="card">
+        <a class="image-link" href="assets/images/spectrum_whole.jpg"><img src="assets/images/spectrum_whole_thumb.jpg" alt="Mandelbrot set rendered with an approximate visible spectrum"></a>
+        <div class="card-body"><h3>Visible spectrum</h3><p>Maps the smooth iteration count to an illustrative wavelength-like progression from violet through red and back again.</p><p class="links"><a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/spectrum.c">spectrum.c</a></p></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="build">
+    <h2>Building and running</h2>
+    <p>The repository includes a root Makefile. GCC, GNU Make, and the standard math library are sufficient.</p>
+    <pre><code>make
+./cosine</code></pre>
+    <p>Each executable asks interactively for the region and image parameters and writes <code>output.bmp</code>. Remove or rename an existing <code>output.bmp</code> before rendering another image. <code>make clean</code> removes the generated executables, the root copy of the palette used by <code>basic</code>, and <code>output.bmp</code>.</p>
+    <p>To compile a smooth-coloring example individually:</p>
+    <pre><code>gcc -Wall src/cosine.c -o cosine -lm</code></pre>
+  </section>
+
+  <section id="coordinates">
+    <h2>Interesting coordinates</h2>
+    <p class="lead">These coordinates are also listed in the source-code README and provide a progression from the whole set into progressively deeper structures.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Real center</th><th>Imaginary center</th><th>Horizontal span</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>-0.7</code></td><td><code>0.0</code></td><td><code>3.0769</code></td><td>Whole Mandelbrot set</td></tr>
+          <tr><td><code>-0.87591</code></td><td><code>0.20464</code></td><td><code>0.53184</code></td><td>Seahorse valley</td></tr>
+          <tr><td><code>-0.759856</code></td><td><code>0.125547</code></td><td><code>0.051579</code></td><td>Spirals and seahorses</td></tr>
+          <tr><td><code>-0.74303</code></td><td><code>0.126433</code></td><td><code>0.01611</code></td><td>Upside-down seahorse</td></tr>
+          <tr><td><code>-0.7435669</code></td><td><code>0.1314023</code></td><td><code>0.0022878</code></td><td>Seahorse tail</td></tr>
+          <tr><td><code>-0.7436499</code></td><td><code>0.13188204</code></td><td><code>0.00073801</code></td><td>Part of a tail</td></tr>
+          <tr><td><code>-0.74364085</code></td><td><code>0.13182733</code></td><td><code>0.00012068</code></td><td>Satellite</td></tr>
+          <tr><td><code>-0.743643135</code></td><td><code>0.131825963</code></td><td><code>0.000014628</code></td><td>Crowns and tails</td></tr>
+          <tr><td><code>-0.743644786</code></td><td><code>0.1318252536</code></td><td><code>0.0000029336</code></td><td>Antenna</td></tr>
+          <tr><td><code>-0.74364409961</code></td><td><code>0.13182604688</code></td><td><code>0.00000066208</code></td><td>Seahorse valley 2</td></tr>
+          <tr><td><code>-0.74364386269</code></td><td><code>0.13182590271</code></td><td><code>0.00000013526</code></td><td>Spirals and seahorses 2</td></tr>
+          <tr><td><code>-0.743643900055</code></td><td><code>0.131825890901</code></td><td><code>0.000000049304</code></td><td>Double spirals with satellites</td></tr>
+          <tr><td><code>-0.7436438885706</code></td><td><code>0.1318259043124</code></td><td><code>0.0000000041493</code></td><td>Outer appendices</td></tr>
+          <tr><td><code>-0.74364388717342</code></td><td><code>0.13182590425182</code></td><td><code>0.00000000059849</code></td><td>Double hook</td></tr>
+          <tr><td><code>-0.743643887037151</code></td><td><code>0.13182590420533</code></td><td><code>0.000000000051299</code></td><td>Islands</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="documentation">
+    <h2>Documentation</h2>
+    <div class="panel">
+      <p><a href="smoothing.html"><strong>Smooth iteration coloring</strong></a> presents the complete derivation as a web page with rendered mathematics.</p>
+      <p>The unchanged repository documents remain available in their original forms: <a href="https://github.com/pdbuchan/mandelbrot/blob/main/README.md">README.md</a>, <a href="https://github.com/pdbuchan/mandelbrot/raw/refs/heads/main/Mandelbrot.docx">Mandelbrot.docx</a>, and <a href="https://github.com/pdbuchan/mandelbrot/blob/main/src/README.md">src/README.md</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>Copyright © 2012–2026 P. D. Buchan. Project material is available under the GNU General Public License, version 3 or later; see the <a href="https://github.com/pdbuchan/mandelbrot/blob/main/LICENSE-NOTICE.md">repository licensing notice</a> for details.</p>
+  </div>
+</footer>
+</body>
+</html>

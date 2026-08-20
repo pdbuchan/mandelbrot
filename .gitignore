@@ -1,0 +1,20 @@
+# Executables produced by the root Makefile
+/basic
+/cosine
+/linear
+/smoothstep
+/bezier
+/warm_power
+/fire
+/hsv2rgb
+/gaussian
+/cubehelix
+/spectrum
+
+# Runtime files
+/palette
+/output.bmp
+
+# Common compiler/editor by-products
+*.o
+*~
