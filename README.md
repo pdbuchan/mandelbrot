@@ -61,13 +61,10 @@ $$
 gives
 
 $$
-\begin{aligned}
 z_{n+1}
-&= (u_n + iv_n)^2 + c \\
-&= u_n^2 + 2iu_nv_n - v_n^2 + c \\
-&= \left(u_n^2 - v_n^2 + u_0\right)
- + i\left(2u_nv_n + v_0\right).
-\end{aligned}
+= (u_n + iv_n)^2 + c
+= u_n^2 + 2iu_nv_n - v_n^2 + c
+= (u_n^2 - v_n^2 + u_0) + i(2u_nv_n + v_0).
 $$
 
 So
