@@ -504,9 +504,9 @@ The quantity still doubles with each iteration.
 The **second logarithm** converts this doubling into addition:
 
 $$
-\ln(\ln r),\
-\ln(\ln r)+\ln 2,\
-\ln(\ln r)+2\ln 2,\ldots
+\ln(\ln r), \
+\ln(\ln r)+ \ln 2, \
+\ln(\ln r) + 2\ln 2,\ldots
 $$
 
 Dividing by $\ln 2$ makes each Mandelbrot iteration correspond to an increment of approximately one.
