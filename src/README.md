@@ -29,10 +29,17 @@ GCC and GNU Make are sufficient for all included builds. Build everything from t
 make
 ```
 
-Or, any of the programs can be compiled individually:
+Or, any of the programs can be compiled individually.
+For `basic.c`:
 
 ```sh
-gcc -Wall program.c -o program
+gcc -Wall basic.c -o basic
+```
+
+For all other programs:
+
+```sh
+gcc -Wall program.c -o program -lm
 ```
 
 ## Usage
@@ -64,5 +71,3 @@ gcc -Wall program.c -o program
 ## License
 
 Code is distributed under the GNU General Public License, version 3 or later, as stated in the source headers and the root [`LICENSE`](LICENSE) file.
-
-The bundled documentation is licensed under the **GNU Free Documentation License, version 1.3 or any later version**, with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
