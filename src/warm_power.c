@@ -1,4 +1,4 @@
-/*  Copyright (C) 2012-2026 P.D. Buchan (pdbuchan@yahoo.com)
+/*  Copyright (C) 2026 P.D. Buchan (pdbuchan@gmail.com)
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
 
 // Mandelbrot Generator - Produce a bitmap file of user-specified area of
 //                        the Mandelbrot set.
-//                      - Determines color from the fractional smooth iteration
+//                      - Determines color from the smooth iteration
 //                        count using a warm RGB power-law palette.
 
 // Compile: gcc -Wall warm_power.c -o warm_power -lm
