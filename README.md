@@ -908,6 +908,6 @@ $$
 
 It is this transformation from explosive quadratic growth into an approximately linear iteration coordinate that allows the integer escape bands of the Mandelbrot set to be replaced by a smoothly varying scalar field.
 
-Copyright 2026 P. David Buchan (pdbuchan@gmail.com)
+Copyright © 2026 P. David Buchan (pdbuchan@gmail.com)
 
 Code is distributed under the GNU General Public License, version 3 or later, as stated in the source headers and the root [`LICENSE`](LICENSE) file.
