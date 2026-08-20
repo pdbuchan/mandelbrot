@@ -1,14 +1,14 @@
 :root {
-  color-scheme: light;
-  --bg: #f5f7fa;
-  --surface: #ffffff;
-  --surface-2: #eef2f7;
-  --text: #172033;
-  --muted: #596579;
-  --border: #d7dee9;
-  --accent: #175ea8;
-  --accent-dark: #104779;
-  --shadow: 0 10px 30px rgba(23, 32, 51, 0.08);
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0d0d0d;
+  --surface-2: #171717;
+  --text: #ffffff;
+  --muted: #c6c6c6;
+  --border: #383838;
+  --accent: #78b7ff;
+  --accent-dark: #a8d0ff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   --radius: 14px;
   --content: 1180px;
 }
@@ -29,9 +29,9 @@ a { color: var(--accent); }
 a:hover { color: var(--accent-dark); }
 
 header.site-header {
-  background: #101827;
-  color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,.12);
+  background: #000000;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
 }
 
 .header-inner,
@@ -56,8 +56,8 @@ main,
 }
 
 nav { display: flex; flex-wrap: wrap; gap: 16px; }
-nav a { color: #eaf2ff; text-decoration: none; font-weight: 600; }
-nav a:hover { color: #fff; text-decoration: underline; }
+nav a { color: var(--text); text-decoration: none; font-weight: 600; }
+nav a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 .hero {
   padding: 58px 0 34px;
@@ -84,12 +84,12 @@ nav a:hover { color: #fff; text-decoration: underline; }
   border: 1px solid var(--accent);
   border-radius: 9px;
   background: var(--accent);
-  color: white;
+  color: #000000;
   text-decoration: none;
   font-weight: 700;
 }
 .button.secondary { background: transparent; color: var(--accent); }
-.button:hover { background: var(--accent-dark); color: #fff; }
+.button:hover { background: var(--accent-dark); color: #000000; }
 
 section { margin: 0 0 48px; }
 section > h2 {
@@ -122,7 +122,7 @@ section > h2 {
   box-shadow: var(--shadow);
 }
 
-.card a.image-link { display: block; background: #05070a; }
+.card a.image-link { display: block; background: #000000; }
 .card img {
   display: block;
   width: 100%;
@@ -138,13 +138,15 @@ code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospac
 code {
   padding: .1em .3em;
   background: var(--surface-2);
+  color: var(--text);
   border-radius: 4px;
 }
 pre {
   overflow-x: auto;
   padding: 16px;
-  background: #101827;
-  color: #eef4ff;
+  background: #111111;
+  color: #f4f4f4;
+  border: 1px solid var(--border);
   border-radius: 10px;
 }
 pre code { padding: 0; background: none; }
