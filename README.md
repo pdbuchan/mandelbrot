@@ -1,5 +1,7 @@
 # Mandelbrot Set
 
+The complete illustrated project description is available on the [Mandelbrot GitHub Pages website](https://pdbuchan.github.io/mandelbrot/).
+
 ## 1. Introduction
 
 The conventional Mandelbrot escape-time algorithm assigns an integer iteration count to every point in the complex plane. Visual representations of the set then assign a color to each point based upon iteration count.
