@@ -769,7 +769,7 @@ The corresponding normalized iteration count becomes
 $$
 \boxed{
 \nu = n + 1 - \frac{\ln\left(\ln \lvert z_n \rvert\right)}{\ln p}
-},
+},\ where\ p\ \geq\ 2,\ normally\ and\ integer.
 $$
 
 up to the chosen additive normalization.
