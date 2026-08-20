@@ -802,13 +802,13 @@ $$
 
 Thus
 
-$$
+```math
 \frac{\ln \lvert z_{n+1} \rvert}{2^{n+1}}
 \approx
 \frac{2\ln \lvert z_n \rvert}{2\cdot 2^n}
 =
 \frac{\ln \lvert z_n \rvert}{2^n}.
-$$
+```
 
 The quantity tends toward an invariant escape rate.
 
