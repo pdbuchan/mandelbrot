@@ -100,13 +100,13 @@ At this point, the result can be disappointing because the color distribution do
 Smooth coloring replaces the integer escape count by a real-valued quantity usually written
 
 $$
-\boxed{\nu = n + 1 - \frac{\ln\!\left(\ln \lvert z_n \rvert\right)}{\ln 2}}
+\boxed{\nu = n + 1 - \frac{\ln\left(\ln \lvert z_n \rvert\right)}{\ln 2}}
 $$
 
 or equivalently,
 
 $$
-\boxed{\nu = n + 1 - \log_2\!\left(\ln \lvert z_n \rvert\right)}.
+\boxed{\nu = n + 1 - \log_2\left(\ln \lvert z_n \rvert\right)}.
 $$
 
 Here $z_n$ is the complex value associated with the escape iteration. This quantity is often called the **normalized iteration count**, **continuous iteration count**, **fractional iteration count**, or **smooth iteration count**.
