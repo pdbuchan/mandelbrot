@@ -25,7 +25,7 @@ z_{n+1} = z_n^2 + c.
 $$
 
 - If $\lvert z_n \rvert \to \infty$, then $c$ is outside the Mandelbrot set.
-- If $\{z_n\}_{n=0}^{\infty}$ is bounded, then $c$ is inside the Mandelbrot set.
+- If $\\{z_n\\}_{n=0}^{\infty}$ is bounded, then $c$ is inside the Mandelbrot set.
 
 ### 1.2. Practical Implementation
 
@@ -907,3 +907,7 @@ $$
 $$
 
 It is this transformation from explosive quadratic growth into an approximately linear iteration coordinate that allows the integer escape bands of the Mandelbrot set to be replaced by a smoothly varying scalar field.
+
+Copyright 2026 P. David Buchan (pdbuchan@gmail.com)
+
+Licensed under the **GNU Free Documentation License, version 1.3 or any later version**, with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
