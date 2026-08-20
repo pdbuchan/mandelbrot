@@ -910,4 +910,4 @@ It is this transformation from explosive quadratic growth into an approximately 
 
 Copyright 2026 P. David Buchan (pdbuchan@gmail.com)
 
-Licensed under the **GNU Free Documentation License, version 1.3 or any later version**, with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+Code is distributed under the GNU General Public License, version 3 or later, as stated in the source headers and the root [`LICENSE`](LICENSE) file.
