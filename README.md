@@ -1,6 +1,6 @@
 # Mandelbrot Set
 
-The complete illustrated project description is available on the [Mandelbrot GitHub Pages website](https://pdbuchan.github.io/mandelbrot/).
+The illustrated project description is available on the [Mandelbrot GitHub Pages website](https://pdbuchan.github.io/mandelbrot/).
 
 ## 1. Introduction
 
